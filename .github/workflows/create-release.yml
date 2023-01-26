@@ -12,18 +12,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Configure Git
-        run: |
-          echo "$PWD"
-          dir
-          git config user.name "GitHub Actions"
-          git config user.email noreply@github.com
-      - name: Create Release Branch
-        run: |
-          echo "$PWD"
-          dir
-          git checkout -b release-${{ steps.versioning.outputs.version }}
-          git push origin release-${{ steps.versioning.outputs.version }}
       - name: Semantic Versioning
         id: versioning
         uses: PaulHatch/semantic-version@v5.0.3
