@@ -11,4 +11,8 @@ changelog:
     - feature
   - title: 🐛 Patches
     labels:
+    - bug
+    - chore
+  - title: 📝 Other Changes
+    labels:
     - "*"
