@@ -1,0 +1,39 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    name: Release new version
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Create Release Branch
+        run: |
+          git checkout -b release-${{ steps.versioning.outputs.version }}
+          git push origin release-${{ steps.versioning.outputs.version }}
+      - name: Semantic Versioning
+        id: versioning
+        uses: PaulHatch/semantic-version@v5.0.3
+        with:
+          branch: main
+          tag_prefix: "v"
+          major_pattern: "Major: "
+          minor_pattern: "Minor: "
+          patch_pattern: "Patch: "
+          format: "v${major}.${minor}.${patch}-pre${increment}"
+      - name: Create Sprint Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.versioning.outputs.version }}
+          release_name: ${{ steps.versioning.outputs.version }}
+          draft: false
+          prerelease: true
+    
