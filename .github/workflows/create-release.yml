@@ -12,8 +12,14 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout code
+      # It should create a scheduled release branches via cron. It uses checkout@v3 for now.
+      - name: Checkout code 
         uses: actions/checkout@v3
+      # Follow this tagging format: “type(category): description [flags]”.
+      - name: Generate Changelog
+        run: |
+          gem install github_changelog_generator
+          github_changelog_generator -u ssuish -p auto-release
       - name: Create Sprint Release
         run: |
           echo "Creating release for version ${{ github.ref }}"
