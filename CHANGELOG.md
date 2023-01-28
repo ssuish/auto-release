@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/ssuish/auto-release/compare/v0.2.0...v0.3.0) (2023-01-28)
+
+
+### Features
+
+* manual running of release actions ([42a05fa](https://github.com/ssuish/auto-release/commit/42a05faba90d7d58e44e2c10cc7cb62d1b4e30a0))
+
+
+### Bug Fixes
+
+* testing auto-branch ([a2500a0](https://github.com/ssuish/auto-release/commit/a2500a0700d0c95e513b5600538a5f4d71f73d26))
+
 ## [0.2.0](https://github.com/ssuish/auto-release/compare/v0.1.14...v0.2.0) (2023-01-28)
 
 
