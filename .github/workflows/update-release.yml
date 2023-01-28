@@ -6,6 +6,9 @@ on:
       SprintBranchName:
         description: 'Branch Name'
         required: true
+  push:
+    branches:
+      - ${{ github.event.inputs.SprintBranchName }}
 
 jobs:
   release:
