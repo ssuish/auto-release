@@ -9,8 +9,7 @@ jobs:
   init:
     name: Initialize Release
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    permissions: write-all
     steps:
       # Please follow conventional-commits convention on commits.
       - uses: google-github-actions/release-please-action@v3
