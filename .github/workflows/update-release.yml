@@ -1,24 +1,20 @@
-name: Create Sprint Release
+name: Update Sprint Release
 
 on:
   workflow_dispatch:
     inputs:
-      versionName:
-        description: 'Version Name'
+      SprintBranchName:
+        description: 'Branch Name'
         required: true
 
 jobs:
   release:
-    name: Initialize Release
+    name: Update Release
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Create release branch
-        run: |
-          git checkout -b release/${{ github.event.inputs.versionName }}
-          git push origin release/${{ github.event.inputs.versionName }}
+        uses: actions/checkout@v2        
       # Please follow conventional-commits convention on commits.
       # https://www.conventionalcommits.org/en/v1.0.0/
       - name: Create Release
@@ -27,5 +23,3 @@ jobs:
           release-type: simple
           token: ${{ secrets.GITHUB_TOKEN }}
           package-name: "auto-release"
-
-    
