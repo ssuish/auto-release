@@ -2,8 +2,8 @@ name: Create Release
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - "main"
 
 jobs:
   init:
@@ -16,6 +16,5 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: python
-          package-name: auto-release
 
     
