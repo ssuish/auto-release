@@ -17,5 +17,9 @@ jobs:
           release-type: simple
           token: ${{ secrets.GITHUB_TOKEN }}
           package-name: "auto-release"
+      # Create release branch based on the release version.
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ steps.release.outputs.release_branch }}
 
     
