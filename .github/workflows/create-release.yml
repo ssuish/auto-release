@@ -1,25 +1,31 @@
 name: Create Release
 
 on:
-  push:
-    branches:
-      - "main"
+  workflow_dispatch:
+    inputs:
+      versionName:
+        description: 'Version Name'
+        required: true
 
 jobs:
-  init:
+  release:
     name: Initialize Release
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create release branch
+        run: |
+          git checkout -b release/${{ github.event.inputs.versionName }}
+          git push origin release/${{ github.event.inputs.versionName }}
       # Please follow conventional-commits convention on commits.
-      - uses: google-github-actions/release-please-action@v3
+      # https://www.conventionalcommits.org/en/v1.0.0/
+      - name: Create Release
+        uses: google-github-actions/release-please-action@v3
         with:
           release-type: simple
           token: ${{ secrets.GITHUB_TOKEN }}
           package-name: "auto-release"
-      # Create release branch based on the release version.
-      - uses: actions/checkout@v5
-        with:
-          ref: ${{ steps.release.outputs.release_branch }}
 
     
