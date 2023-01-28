@@ -16,6 +16,10 @@ jobs:
       - name: Checkout code 
         uses: actions/checkout@v3
       # Follow this tagging format: “type(category): description [flags]”.
+      - name: Install ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
       - name: Generate Changelog
         run: |
           gem install github_changelog_generator
