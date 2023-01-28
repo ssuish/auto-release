@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.2](https://github.com/ssuish/auto-release/compare/v0.3.1...v0.3.2) (2023-01-28)
+
+
+### Bug Fixes
+
+* added on push trigger ([5b8e558](https://github.com/ssuish/auto-release/commit/5b8e5589ff74b3f6bf18d672e911b8854e3d8c60))
+* fix startup failure ([0f5da6d](https://github.com/ssuish/auto-release/commit/0f5da6da52bddf61dc4d53af0e0ab07dadbfb9dd))
+* renamed jobs ([8584653](https://github.com/ssuish/auto-release/commit/85846534c49f6d4908db55183eb80cb888f6fec7))
+* testing ([5c739a2](https://github.com/ssuish/auto-release/commit/5c739a25ac7d9bac53a30c655206bf9879773d38))
+
 ## [0.3.1](https://github.com/ssuish/auto-release/compare/v0.3.0...v0.3.1) (2023-01-28)
 
 
