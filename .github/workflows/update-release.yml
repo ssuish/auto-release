@@ -6,9 +6,6 @@ on:
       SprintBranchName:
         description: 'Branch Name'
         required: true
-  push:
-    branches:
-      - ${{ github.event.inputs.SprintBranchName }}
 
 jobs:
   release:
@@ -20,6 +17,9 @@ jobs:
         uses: actions/checkout@v2        
       # Please follow conventional-commits convention on commits.
       # https://www.conventionalcommits.org/en/v1.0.0/
+      - name: Checkout to release branch
+        run: |
+          git checkout ${{ github.event.inputs.SprintBranchName }}
       - name: Create Release
         uses: google-github-actions/release-please-action@v3
         with:
