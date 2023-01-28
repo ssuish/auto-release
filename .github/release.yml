@@ -8,7 +8,7 @@ changelog:
     labels:
     - minor
     - enhancement
-    - feature
+    - feat
   - title: 🐛 Patches
     labels:
     - bug

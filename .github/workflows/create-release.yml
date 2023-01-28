@@ -6,24 +6,16 @@ on:
       - "v*"
 
 jobs:
-  release:
-    name: Release new version
+  init:
+    name: Initialize Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      # It should create a scheduled release branches via cron. It uses checkout@v3 for now.
-      - name: Checkout code 
-        uses: actions/checkout@v3
-      # Follow this tagging format: “type(category): description [flags]”.
-      - name: Install ruby
-        uses: ruby/setup-ruby@v1
+      # Please follow conventional-commits convention on commits.
+      - uses: google-github-actions/release-please-action@v3
         with:
-          ruby-version: 3.2.0
-      - name: Generate Changelog
-        run: |
-          gem install github_changelog_generator
-          github_changelog_generator -u ssuish -p auto-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          release-type: python
+          package-name: auto-release
+
     
