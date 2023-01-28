@@ -1,4 +1,4 @@
-name: Create Sprint Release
+name: Scheduled Release
 
 on:
   workflow_dispatch:

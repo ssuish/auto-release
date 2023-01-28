@@ -1,10 +1,10 @@
-name: Update Sprint Release
+name: Update Release
 
 on:
   workflow_dispatch:
     inputs:
       SprintBranchName:
-        description: 'Branch Name'
+        description: 'Release Branch Name'
         required: true
 
 jobs:
@@ -14,12 +14,15 @@ jobs:
     permissions: write-all
     steps:
       - name: Checkout
-        uses: actions/checkout@v2        
-      # Please follow conventional-commits convention on commits.
-      # https://www.conventionalcommits.org/en/v1.0.0/
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0        
       - name: Checkout to release branch
         run: |
-          git checkout ${{ github.event.inputs.SprintBranchName }}
+          git fetch --all
+          git checkout -b ${{ github.event.inputs.SprintBranchName }}
+      # Please follow conventional-commits convention on commits.
+      # https://www.conventionalcommits.org/en/v1.0.0/
       - name: Create Release
         uses: google-github-actions/release-please-action@v3
         with:
