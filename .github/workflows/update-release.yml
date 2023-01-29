@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       SprintBranchName:
-        description: 'Release Branch Name'
+        description: 'Release on Branch Name'
         required: true
 
 jobs:
