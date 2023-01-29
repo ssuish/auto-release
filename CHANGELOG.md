@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/ssuish/auto-release/compare/v0.4.0...v0.4.1) (2023-01-29)
+
+
+### Bug Fixes
+
+* test release ([f91aa3d](https://github.com/ssuish/auto-release/commit/f91aa3d32d8960621597df6b03d209682055e6c1))
+
 ## [0.4.0](https://github.com/ssuish/auto-release/compare/v0.3.5...v0.4.0) (2023-01-29)
 
 
