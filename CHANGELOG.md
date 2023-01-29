@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.5](https://github.com/ssuish/auto-release/compare/v0.3.4...v0.3.5) (2023-01-29)
+
+
+### Bug Fixes
+
+* test ([b495054](https://github.com/ssuish/auto-release/commit/b495054b59b99a18bc162a606b0fd810517cbc55))
+* testing actions ([65f0306](https://github.com/ssuish/auto-release/commit/65f0306bfdd41e9fcfd60ddc217ad1abaf1f4ef0))
+* testing new pattern matching 2 ([6d5aedf](https://github.com/ssuish/auto-release/commit/6d5aedfe5a58b543d9dc8b5b122614dc5849bf34))
+
 ## [0.3.4](https://github.com/ssuish/auto-release/compare/v0.3.3...v0.3.4) (2023-01-29)
 
 
