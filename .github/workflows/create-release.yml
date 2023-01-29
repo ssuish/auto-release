@@ -4,7 +4,7 @@ on:
   push:
     branches:
       # Matches all release branches with the format: release/2023-01
-      - 'release/[0-9]-[0-9]'
+      - release/*
 
 jobs:
   release:
