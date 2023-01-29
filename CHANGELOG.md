@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.3](https://github.com/ssuish/auto-release/compare/v0.3.2...v0.3.3) (2023-01-29)
+
+
+### Bug Fixes
+
+* regex fix ([aafaebc](https://github.com/ssuish/auto-release/commit/aafaebc5f27e69e95b40c72044ffd881d5eec4a3))
+* renamed ([4929bfa](https://github.com/ssuish/auto-release/commit/4929bfaa87675883a8704506db3d6ce5f907b098))
+* reverted to auto and uses regex for releases. ([7dad26c](https://github.com/ssuish/auto-release/commit/7dad26c3d8136389667d6814f386232663e640eb))
+* testing push actions ([637be21](https://github.com/ssuish/auto-release/commit/637be217afeffcd0edf809754838864323e70226))
+
 ## [0.3.2](https://github.com/ssuish/auto-release/compare/v0.3.1...v0.3.2) (2023-01-28)
 
 
