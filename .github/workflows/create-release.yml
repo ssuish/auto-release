@@ -22,10 +22,6 @@ jobs:
           release-type: simple
           token: ${{ secrets.GITHUB_TOKEN }}
           package-name: "auto-release"
-  deploy:
-    needs: release
-    name: Deploy Release
-    runs-on: ubuntu-latest
     
 
     
