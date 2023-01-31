@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/ssuish/auto-release/compare/v0.4.2...v0.4.3) (2023-01-31)
+
+
+### Bug Fixes
+
+* release can be triggered now via release. ([68313a2](https://github.com/ssuish/auto-release/commit/68313a2ed649c2392a0c72ced65aa6ec268cd817))
+
 ## [0.4.2](https://github.com/ssuish/auto-release/compare/v0.4.1...v0.4.2) (2023-01-29)
 
 
