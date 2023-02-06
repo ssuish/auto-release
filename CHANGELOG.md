@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/ssuish/auto-release/compare/v0.4.4...v0.4.4) (2023-02-06)
+
+
+### Bug Fixes
+
+* something ([f7ab950](https://github.com/ssuish/auto-release/commit/f7ab9506f1bcf8154faf9dc1453e44aedde25fff))
+
 ## [0.4.4](https://github.com/ssuish/auto-release/compare/v0.4.3...v0.4.4) (2023-02-06)
 
 
